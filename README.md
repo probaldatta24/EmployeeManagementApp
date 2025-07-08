@@ -6,22 +6,54 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# 🧑‍💼 Employee Management App
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A simple Employee Management application built with **Angular** for the frontend and **JSON Server** for the mock backend. It includes a search panel and a data table for listing and filtering employee records.
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 📁 Project Structure
 
-## Running unit tests
+- `src/` – Angular application (Search Panel, Data Table, etc.)
+- `db.json` – Mock backend data for employees
+- `json-server` – Used for fake RESTful APIs
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## ⚙️ Setup Instructions
 
-## Running end-to-end tests
+- Node.js and npm installed: [Download here](https://nodejs.org/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+ Install Angular CLI
+- npm install -g @angular/cli
 
-## Further help
+## ⚙️ Clone the Repository
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+git clone https://github.com/probaldatta24/EmployeeManagementApp.git
+cd employee-management
+
+## ⚙️ Install Angular Project Dependencies
+
+npm install
+
+## ⚙️ Start JSON Server
+
+npm json-server --watch db.json --port 3000
+This will start your mock API at: http://localhost:3000/employees
+
+## ⚙️ Start Angular Frontend
+
+ng serve
+Angular app runs at: http://localhost:4200
+
+
+🧪 Features
+
+✅ Search employees by firstname, phone, email, address, or gender
+✅ Fake API with json-server
+
+## 📐 Design Decisions
+
+✅Component-Based Architecture: The app is divided into reusable components like SearchPanelComponent and DataTableComponent to ensure clean separation of concerns and maintainability.
+✅Reactive Forms: Used for search input to provide better form control, validation, and reactive updates.
+✅Service Layer (EmployeeService): All API interactions are handled via a service, keeping components clean and focusing only on presentation logic.
+✅ JSON Server: Chosen for its simplicity and ease of mocking REST APIs without needing a backend setup.
+✅Git Branching (dev → main): Feature development is done on the dev branch and later merged into main for production stability.

@@ -1,0 +1,17 @@
+<div class="search-panel">
+    <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+        <input type="text" class="form-control" formControlName="firstName" placeholder="First Name" />
+        <input type="text" class="form-control" formControlName="email" placeholder="Email" />
+        <input type="text" class="form-control" formControlName="address" placeholder="Address" />
+        <input type="text" class="form-control" formControlName="phoneNumber" placeholder="Phone Number" />
+        <select class="form-control" formControlName="gender">
+            <option value="" selected>Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <div class="button-group">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <button type="button" class="btn btn-secondary" (click)="onClear()">Clear</button>
+        </div>
+    </form>
+</div>
